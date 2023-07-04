@@ -30,7 +30,7 @@ namespace CRUDwithDapper.Controllers
         {
             using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
             await connection.ExecuteAsync("insert into superheroes (name, firstname, lastname, city) values (@Name, @FirstName, @LastName, @City)", hero);
-            return Ok();
+            return Ok(); 
         }
     }
 }
